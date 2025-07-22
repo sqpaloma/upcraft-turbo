@@ -2,10 +2,10 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "web-portfolio-lab-main",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.webportfolio.desktop",
   "build": {
     "frontendDist": "../dist",
-    "devUrl": "http://localhost:3001",
+    "devUrl": "http://localhost:3003",
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },
