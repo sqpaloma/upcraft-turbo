@@ -10,7 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NotFoundRouteImport } from './routes/NotFound'
-import { Route as IndexRouteImport } from './routes/Index'
+import { Route as IndexRouteImport } from './routes/index'
 
 const NotFoundRoute = NotFoundRouteImport.update({
   id: '/NotFound',
@@ -18,30 +18,30 @@ const NotFoundRoute = NotFoundRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
-  id: '/Index',
-  path: '/Index',
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/Index': typeof IndexRoute
+  '/': typeof IndexRoute
   '/NotFound': typeof NotFoundRoute
 }
 export interface FileRoutesByTo {
-  '/Index': typeof IndexRoute
+  '/': typeof IndexRoute
   '/NotFound': typeof NotFoundRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/Index': typeof IndexRoute
+  '/': typeof IndexRoute
   '/NotFound': typeof NotFoundRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/Index' | '/NotFound'
+  fullPaths: '/' | '/NotFound'
   fileRoutesByTo: FileRoutesByTo
-  to: '/Index' | '/NotFound'
-  id: '__root__' | '/Index' | '/NotFound'
+  to: '/' | '/NotFound'
+  id: '__root__' | '/' | '/NotFound'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -58,10 +58,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NotFoundRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Index': {
-      id: '/Index'
-      path: '/Index'
-      fullPath: '/Index'
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }

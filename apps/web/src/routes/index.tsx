@@ -8,19 +8,19 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ServicesSection from "@/components/ServicesSection";
 
 function IndexComponent() {
-	return (
-		<div className="min-h-screen bg-background">
-			<Navigation />
-			<HeroSection />
-			<AboutSection />
-			<ServicesSection />
-			<PortfolioSection />
-			<ContactSection />
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <PortfolioSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  );
 }
 
-export const Route = createFileRoute("/Index")({
-	component: IndexComponent,
+export const Route = createFileRoute("/")({
+  component: IndexComponent,
 });
