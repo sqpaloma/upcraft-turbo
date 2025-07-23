@@ -52,10 +52,6 @@ const Navigation = () => {
           >
             UpCraftCrew
           </Link>
-          : "gradient-primary bg-clip-text text-transparent"
-          {"}"}`{"}"}
-          {">"}
-          UpCraftCrew
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
