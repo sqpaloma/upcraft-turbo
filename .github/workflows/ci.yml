@@ -7,11 +7,14 @@ on:
       - "**"
 
 jobs:
-  install-lint-types-build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Prevent direct push to main
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: |
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main' &&
+          github.actor != 'github-actions[bot]'
         run: |
           echo "❌ Direct push to main is not allowed. Use a Pull Request instead."
           exit 1
