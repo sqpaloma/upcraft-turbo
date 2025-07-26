@@ -2,6 +2,7 @@ import { Award, Target, Users, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import AnimatedStats from "@/components/AnimatedStats";
 
 const AboutSection = () => {
   const headerRef = useScrollAnimation();
@@ -211,6 +212,9 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Animated Stats Section */}
+        <AnimatedStats />
       </div>
     </section>
   );
