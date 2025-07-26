@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  install-lint-types-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prevent direct push to main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          echo "❌ Direct push to main is not allowed. Use a Pull Request instead."
+          exit 1
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint all packages
+        run: npx turbo run lint --parallel
+
+      - name: Type check
+        run: npx turbo run check-types --parallel
+
+      - name: Build all
+        run: npx turbo run build --parallel

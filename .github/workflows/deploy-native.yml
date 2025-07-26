@@ -1,0 +1,16 @@
+name: Deploy Native App (Placeholder)
+
+on:
+  workflow_dispatch: # manual trigger for now
+
+jobs:
+  deploy-native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Placeholder - you will add EAS Build or similar later
+      - run: echo "Native deployment not configured yet"

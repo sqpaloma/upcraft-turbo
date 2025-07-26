@@ -1,0 +1,16 @@
+name: Deploy Tauri App (Placeholder)
+
+on:
+  workflow_dispatch: # manual trigger for now
+
+jobs:
+  deploy-tauri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Placeholder - you will add build & packaging later
+      - run: echo "Tauri deployment not configured yet"
