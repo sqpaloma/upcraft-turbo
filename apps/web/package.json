@@ -32,7 +32,7 @@
 		"@tailwindcss/vite": "^4.0.15",
 		"@tanstack/react-form": "^1.12.3",
 		"@tanstack/react-router": "^1.114.25",
-		"@web-portfolio-lab-main/backend": "*",
+		"@web-portfolio-lab-main/backend": "workspace:*",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"convex": "^1.25.0",

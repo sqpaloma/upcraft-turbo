@@ -35,7 +35,7 @@
     "react-native-screens": "~4.10.0",
     "react-native-web": "^0.20.0",
     "convex": "^1.25.0",
-    "@web-portfolio-lab-main/backend": "*",
+    "@web-portfolio-lab-main/backend": "workspace:*",
     "expo-linear-gradient": "~14.1.5"
   },
   "devDependencies": {
