@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "npx convex dev",
-		"dev:setup": "npx convex dev --configure --until-success",
-		"build": "echo 'Convex backend build completed'"
+		"setup": "convex dev --until-success"
+
 	},
 	"author": "",
 	"license": "ISC",
