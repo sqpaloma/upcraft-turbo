@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx convex deploy",
+  "buildCommand": "npx convex deploy --configure",
   "installCommand": "pnpm install",
   "framework": null
 } 
