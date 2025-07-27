@@ -12,7 +12,9 @@
 		"generate-pwa-assets": "pwa-assets-generator",
 		"tauri": "tauri",
 		"desktop:dev": "tauri dev",
-		"desktop:build": "tauri build"
+		"desktop:build": "tauri build",
+		"wrangler:dev": "wrangler dev --port=3001",
+		"deploy": "pnpm run build && wrangler deploy"
 	},
 	"devDependencies": {
 		"@tanstack/react-router-devtools": "^1.114.27",
@@ -26,7 +28,9 @@
 		"postcss": "^8.5.3",
 		"tailwindcss": "^4.0.15",
 		"typescript": "^5.8.3",
-		"vite": "^6.2.2"
+		"@cloudflare/vite-plugin": "^1.9.0",
+		"vite": "^6.2.2",
+		"wrangler": "^4.23.0"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^5.1.1",
